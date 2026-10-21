@@ -1,5 +1,7 @@
 # Real-Time Fraud Detection Intelligence Platform
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://real-time-fraud-detection-intelligence-platform.vercel.app)
+
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-Cost--Sensitive-red.svg)](https://xgboost.readthedocs.io/)
@@ -9,6 +11,8 @@
 [![Kaggle Benchmark](https://img.shields.io/badge/Kaggle-284k%20European%20Cardholders-20beff.svg)](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 [![PR-AUC](https://img.shields.io/badge/PR--AUC-0.7834-success.svg)](#benchmark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> 🌐 **Live Production Deployment**: [https://real-time-fraud-detection-intelligence-platform.vercel.app](https://real-time-fraud-detection-intelligence-platform.vercel.app)
 
 **An enterprise-grade, testable real-time financial fraud detection and investigation platform built with FastAPI, XGBoost, Graph Fraud Analytics, 24-feature streaming engine, and an interactive 6-page operations console.**
 
