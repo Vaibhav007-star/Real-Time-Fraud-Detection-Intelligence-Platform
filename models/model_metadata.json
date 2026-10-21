@@ -1,0 +1,239 @@
+{
+  "model_version": "fraud-ensemble-v1.2.0",
+  "model_type": "Class-Balanced Non-Linear Interaction Ensemble (with Logistic Baseline comparison)",
+  "trained_at": "2026-10-21T15:19:50.943598+00:00",
+  "score_calibration_notice": "Scores represent uncalibrated model risk rankings between 0 and 1, not guaranteed empirical probabilities.",
+  "chronological_split": {
+    "total_samples": 878,
+    "train_samples": 614,
+    "test_samples": 264,
+    "train_fraud_ratio": 0.2752,
+    "test_fraud_ratio": 0.3333
+  },
+  "improved_model_metrics": {
+    "available": true,
+    "sample_count": 264,
+    "positive_fraud_count": 88,
+    "negative_legit_count": 176,
+    "imbalance_ratio": 0.3333,
+    "threshold": 0.5,
+    "precision": 1.0,
+    "recall": 0.9886,
+    "fraud_detection_rate": 0.9886,
+    "f1_score": 0.9943,
+    "pr_auc": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "precision_at_k": 1.0,
+    "k_alert_volume": 25,
+    "raw_accuracy": 0.9962,
+    "accuracy_caveat": "Accuracy alone is insufficient for imbalanced fraud detection because predicting 100% legitimate yields 66.7% accuracy while catching 0% of fraud. PR-AUC, Recall, False-Positive Rate, and Precision@K measure real operational effectiveness.",
+    "confusion_matrix": {
+      "tn": 176,
+      "fp": 0,
+      "fn": 1,
+      "tp": 87
+    },
+    "score_distribution": [
+      {
+        "bin": "0.0-0.1",
+        "legitimate": 168,
+        "fraud": 0
+      },
+      {
+        "bin": "0.1-0.2",
+        "legitimate": 6,
+        "fraud": 0
+      },
+      {
+        "bin": "0.2-0.3",
+        "legitimate": 2,
+        "fraud": 1
+      },
+      {
+        "bin": "0.3-0.4",
+        "legitimate": 0,
+        "fraud": 0
+      },
+      {
+        "bin": "0.4-0.5",
+        "legitimate": 0,
+        "fraud": 0
+      },
+      {
+        "bin": "0.5-0.6",
+        "legitimate": 0,
+        "fraud": 0
+      },
+      {
+        "bin": "0.6-0.7",
+        "legitimate": 0,
+        "fraud": 0
+      },
+      {
+        "bin": "0.7-0.8",
+        "legitimate": 0,
+        "fraud": 0
+      },
+      {
+        "bin": "0.8-0.9",
+        "legitimate": 0,
+        "fraud": 0
+      },
+      {
+        "bin": "0.9-1.0",
+        "legitimate": 0,
+        "fraud": 87
+      }
+    ]
+  },
+  "baseline_model_metrics": {
+    "available": true,
+    "sample_count": 264,
+    "positive_fraud_count": 88,
+    "negative_legit_count": 176,
+    "imbalance_ratio": 0.3333,
+    "threshold": 0.5,
+    "precision": 0.8687,
+    "recall": 0.9773,
+    "fraud_detection_rate": 0.9773,
+    "f1_score": 0.9198,
+    "pr_auc": 0.965,
+    "roc_auc": 0.9709,
+    "false_positive_rate": 0.0739,
+    "precision_at_k": 1.0,
+    "k_alert_volume": 25,
+    "raw_accuracy": 0.9432,
+    "accuracy_caveat": "Accuracy alone is insufficient for imbalanced fraud detection because predicting 100% legitimate yields 66.7% accuracy while catching 0% of fraud. PR-AUC, Recall, False-Positive Rate, and Precision@K measure real operational effectiveness.",
+    "confusion_matrix": {
+      "tn": 163,
+      "fp": 13,
+      "fn": 2,
+      "tp": 86
+    },
+    "score_distribution": [
+      {
+        "bin": "0.0-0.1",
+        "legitimate": 66,
+        "fraud": 2
+      },
+      {
+        "bin": "0.1-0.2",
+        "legitimate": 81,
+        "fraud": 0
+      },
+      {
+        "bin": "0.2-0.3",
+        "legitimate": 11,
+        "fraud": 0
+      },
+      {
+        "bin": "0.3-0.4",
+        "legitimate": 2,
+        "fraud": 0
+      },
+      {
+        "bin": "0.4-0.5",
+        "legitimate": 3,
+        "fraud": 0
+      },
+      {
+        "bin": "0.5-0.6",
+        "legitimate": 2,
+        "fraud": 0
+      },
+      {
+        "bin": "0.6-0.7",
+        "legitimate": 0,
+        "fraud": 1
+      },
+      {
+        "bin": "0.7-0.8",
+        "legitimate": 0,
+        "fraud": 1
+      },
+      {
+        "bin": "0.8-0.9",
+        "legitimate": 4,
+        "fraud": 1
+      },
+      {
+        "bin": "0.9-1.0",
+        "legitimate": 7,
+        "fraud": 83
+      }
+    ]
+  },
+  "model_comparison": {
+    "pr_auc_lift": 0.035,
+    "f1_lift": 0.0745,
+    "recall_lift": 0.0113
+  },
+  "feature_importances": [
+    {
+      "feature": "repeated_transfer_count",
+      "importance": 0.1815
+    },
+    {
+      "feature": "is_high_risk_merchant_cat",
+      "importance": 0.1591
+    },
+    {
+      "feature": "recent_failed_attempts_15m",
+      "importance": 0.0943
+    },
+    {
+      "feature": "ip_shared_account_count",
+      "importance": 0.0809
+    },
+    {
+      "feature": "tx_amount_log",
+      "importance": 0.0669
+    },
+    {
+      "feature": "rapid_location_change",
+      "importance": 0.0609
+    },
+    {
+      "feature": "failed_then_success_pattern",
+      "importance": 0.0482
+    },
+    {
+      "feature": "is_unusually_large_amount",
+      "importance": 0.0475
+    },
+    {
+      "feature": "local_neighborhood_risk",
+      "importance": 0.0418
+    },
+    {
+      "feature": "has_circular_transfer_path",
+      "importance": 0.0385
+    },
+    {
+      "feature": "amount_zscore_vs_account",
+      "importance": 0.0369
+    },
+    {
+      "feature": "is_first_time_merchant",
+      "importance": 0.022
+    },
+    {
+      "feature": "device_shared_account_count",
+      "importance": 0.0205
+    },
+    {
+      "feature": "seconds_since_prev_tx",
+      "importance": 0.0172
+    },
+    {
+      "feature": "tx_count_5m",
+      "importance": 0.0138
+    }
+  ],
+  "drift_indicators": {
+    "status": "NOMINAL",
+    "population_stability_index": 0.042,
+    "monitored_features_within_bounds": 24
+  }
+}

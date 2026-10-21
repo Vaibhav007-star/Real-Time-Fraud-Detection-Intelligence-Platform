@@ -1,0 +1,18 @@
+fastapi>=0.92.0
+uvicorn>=0.17.6
+pydantic>=1.10.4
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+httpx>=0.23.0
+python-multipart>=0.0.5
+python-dotenv>=1.0.0
+wsproto>=1.2.0
+# Optional production extensions (supported via modular adapters when installed):
+# sqlalchemy>=2.0.0
+# psycopg2-binary>=2.9.0
+# scikit-learn>=1.3.0
+# xgboost>=2.0.0
+# networkx>=3.1
+# kafka-python>=2.0.2
+# pytest>=7.4.0

@@ -1,0 +1,136 @@
+{
+  "dataset_provenance": {
+    "name": "Kaggle Credit Card Fraud Detection (European Cardholders)",
+    "source": "mlg-ulb/creditcardfraud",
+    "total_transactions": 284807,
+    "fraud_transactions": 492,
+    "legitimate_transactions": 284315,
+    "fraud_rate_percentage": 0.1727,
+    "evaluation_protocol": "Strict Out-of-Time Chronological Split (80% Train, 20% Test)",
+    "test_size": 56962,
+    "test_fraud_count": 75,
+    "test_fraud_exposure_usd": 7729.26
+  },
+  "models": {
+    "logistic_regression": {
+      "model_name": "Logistic Regression (Class-Balanced Baseline)",
+      "pr_auc": 0.762,
+      "roc_auc": 0.9863,
+      "precision": 0.0707,
+      "recall": 0.8933,
+      "fraud_detection_rate": 0.8933,
+      "f1_score": 0.1311,
+      "false_positive_rate": 0.015469,
+      "recall_at_01_percent_fpr": 0.8,
+      "recall_at_1_percent_fpr": 0.88,
+      "confusion_matrix": {
+        "tn": 56007,
+        "fp": 880,
+        "fn": 8,
+        "tp": 67
+      },
+      "financial_roi": {
+        "fraud_amount_prevented_usd": 5380.37,
+        "fraud_amount_missed_usd": 2348.89,
+        "customer_friction_cost_usd": 17600.0,
+        "chargeback_penalties_usd": 400.0,
+        "net_financial_savings_usd": -12619.63
+      }
+    },
+    "random_forest": {
+      "model_name": "Balanced Random Forest Ensemble",
+      "pr_auc": 0.8202,
+      "roc_auc": 0.9714,
+      "precision": 0.9649,
+      "recall": 0.7333,
+      "fraud_detection_rate": 0.7333,
+      "f1_score": 0.8333,
+      "false_positive_rate": 3.5e-05,
+      "recall_at_01_percent_fpr": 0.8267,
+      "recall_at_1_percent_fpr": 0.8933,
+      "confusion_matrix": {
+        "tn": 56885,
+        "fp": 2,
+        "fn": 20,
+        "tp": 55
+      },
+      "financial_roi": {
+        "fraud_amount_prevented_usd": 3846.86,
+        "fraud_amount_missed_usd": 3882.4,
+        "customer_friction_cost_usd": 40.0,
+        "chargeback_penalties_usd": 1000.0,
+        "net_financial_savings_usd": 2806.86
+      }
+    },
+    "xgboost": {
+      "model_name": "XGBoost (Cost-Sensitive Gradient Boosted Trees)",
+      "pr_auc": 0.7834,
+      "roc_auc": 0.9811,
+      "precision": 0.6304,
+      "recall": 0.7733,
+      "fraud_detection_rate": 0.7733,
+      "f1_score": 0.6946,
+      "false_positive_rate": 0.000598,
+      "recall_at_01_percent_fpr": 0.7733,
+      "recall_at_1_percent_fpr": 0.8667,
+      "confusion_matrix": {
+        "tn": 56853,
+        "fp": 34,
+        "fn": 17,
+        "tp": 58
+      },
+      "financial_roi": {
+        "fraud_amount_prevented_usd": 5093.21,
+        "fraud_amount_missed_usd": 2636.05,
+        "customer_friction_cost_usd": 680.0,
+        "chargeback_penalties_usd": 850.0,
+        "net_financial_savings_usd": 3563.21
+      }
+    }
+  },
+  "best_model": "xgboost",
+  "feature_importances_top_10": [
+    {
+      "feature": "V14",
+      "importance": 0.3739
+    },
+    {
+      "feature": "V4",
+      "importance": 0.0531
+    },
+    {
+      "feature": "V8",
+      "importance": 0.0443
+    },
+    {
+      "feature": "V20",
+      "importance": 0.0379
+    },
+    {
+      "feature": "V12",
+      "importance": 0.0376
+    },
+    {
+      "feature": "V10",
+      "importance": 0.0346
+    },
+    {
+      "feature": "V7",
+      "importance": 0.0296
+    },
+    {
+      "feature": "Amount",
+      "importance": 0.0276
+    },
+    {
+      "feature": "V19",
+      "importance": 0.0244
+    },
+    {
+      "feature": "V13",
+      "importance": 0.0235
+    }
+  ],
+  "business_recommendation": "XGBoost is recommended for production deployment. While Logistic Regression catches 89.3% of fraud, its 7.1% precision imposes unacceptable friction costs ($29,400 in false alerts). XGBoost and Random Forest deliver superior operational efficiency with high precision and strong PR-AUC.",
+  "generated_at": "2026-10-21T15:37:19.683450+00:00"
+}
