@@ -1,6 +1,7 @@
 # Real-Time Fraud Detection Intelligence Platform
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://real-time-fraud-detection-intelligence-platform.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-2ea44f.svg?style=for-the-badge&logo=github&logoColor=white)](https://vaibhav007-star.github.io/Real-Time-Fraud-Detection-Intelligence-Platform/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Vaibhav007-star/Real-Time-Fraud-Detection-Intelligence-Platform)
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
@@ -12,7 +13,8 @@
 [![PR-AUC](https://img.shields.io/badge/PR--AUC-0.7834-success.svg)](#benchmark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> 🌐 **Live Production Deployment**: [https://real-time-fraud-detection-intelligence-platform.vercel.app](https://real-time-fraud-detection-intelligence-platform.vercel.app)
+> 🌐 **Live Web Application**: [https://vaibhav007-star.github.io/Real-Time-Fraud-Detection-Intelligence-Platform/](https://vaibhav007-star.github.io/Real-Time-Fraud-Detection-Intelligence-Platform/)  
+> ⚡ **Deploy to Vercel (1-Click)**: [Click to Deploy on Vercel](https://vercel.com/new/clone?repository-url=https://github.com/Vaibhav007-star/Real-Time-Fraud-Detection-Intelligence-Platform)
 
 **An enterprise-grade, testable real-time financial fraud detection and investigation platform built with FastAPI, XGBoost, Graph Fraud Analytics, 24-feature streaming engine, and an interactive 6-page operations console.**
 
